@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Issue / Return Books</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Issue / Return</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="admin_dashboard.html">Admin Dashboard</a>
+  </nav>
+</header>
+
+<div class="action-bar">
+  <button id="issue-btn">Issue Book</button>
+  <button id="return-btn">Return Book</button>
+</div>
+
+<div id="form-area"></div>
+
+<!-- Report Generation Popup -->
+<div id="report-popup" class="popup">
+  <div class="popup-content">
+    <h2>Report Generation</h2>
+    <button onclick="generatePDF()">Generate PDF</button>
+    <button onclick="generateExcel()">Generate Excel</button>
+    <p>Total Users: <span id="total-users">0</span></p>
+    <p>Total Books Borrowed: <span id="total-borrowed">0</span></p>
+  </div>
+</div>
+
+<!-- Payment Success Popup -->
+<div id="payment-popup" class="popup">
+  <div class="popup-content success">
+    <div class="tick-circle">✔</div>
+    <h2>Payment Successful</h2>
+    <p>Payment was successful!</p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,21 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Login | Library System</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Library Management System</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h2>Login</h2>
-    <form>
-      <input type="email" name="email" placeholder="Email" required>
-      <input type="password" name="password" placeholder="Password" required>
-     <a href="C:/xampp/htdocs/Liblary/index.html">Login </a>
-    </form>
-    <a href="#">Forgot Password?</a>
-    <p>Don't have an account? <a href="register.html">Register</a></p>
-  </div>
+<header>
+  <h1>Library Management System</h1>
+  <nav>
+    <a href="issue_return.html">Issue/Return</a>
+    <a href="admin_dashboard.html">Admin Dashboard</a>
+  </nav>
+</header>
 
+<section class="search-sort-bar">
+  <input type="text" id="searchInput" placeholder="Search by title, author, category or ISBN...">
+  <select id="sortSelect">
+    <option value="">Sort By</option>
+    <option value="title">Title</option>
+    <option value="author">Author</option>
+    <option value="category">Category</option>
+    <option value="isbn">ISBN</option>
+  </select>
+</section>
+
+<section id="book-list"></section>
+
+
+<div id="book-popup" class="popup">
+  <div class="popup-content">
+    <span class="close-btn" onclick="closePopup()">&times;</span>
+    <img id="popup-cover" alt="Book Cover">
+    <h2 id="popup-title"></h2>
+    <p><strong>Author:</strong> <span id="popup-author"></span></p>
+    <p><strong>Category:</strong> <span id="popup-category"></span></p>
+    <p><strong>ISBN:</strong> <span id="popup-isbn"></span></p>
+    <p><strong>Availability:</strong> <span id="popup-availability"></span></p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+<section class="contact" >
+        <h2>Contact Us</h2>
+        <p>Address: KATTI LIBLARY</p>
+        <p>Email: info"kattiliblary.co.ke</p>
+        <p>Phone: +254 700 000 000</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 KATTI Library. All rights reserved.</p>
+    </footer>
 </body>
 </html>
